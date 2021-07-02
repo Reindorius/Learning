@@ -1,6 +1,6 @@
 package CollectionPractice.List;
 
-public class TestList {
+public class TestList implements Comparable<TestList>{
     private int var1;
     private String var2;
     private double var3;
@@ -39,5 +39,27 @@ public class TestList {
     /** Overwrite toString method */
     {
         return "var1 " + this.var1 + "\nvar2: " +this.var2 + "\nvar3: " + this.var3;
+    }
+
+    public int compareTo(TestList tl)
+    {
+        if(this.var1 < tl.var1)
+        {
+            return -1;
+        }
+        else if(this.var1 > tl.var1)
+            return 1;
+        else
+        {
+            if(Math.abs(this.var3 - tl.var3) < 1e-12)
+            {
+                return this.var2.compareTo(tl.var2);
+            }
+            else
+            {
+                if(this.var3 - tl.var3 < 0) return -1;
+                else return 1;
+            }
+        }
     }
 }
