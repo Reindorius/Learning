@@ -1,6 +1,6 @@
 package CollectionPractice.List;
 
-class TestList {
+public class TestList {
     private int var1;
     private String var2;
     private double var3;
@@ -33,5 +33,11 @@ class TestList {
 
     public void setVar3(double var3) {
         this.var3 = var3;
+    }
+
+    public String toString()
+    /** Overwrite toString method */
+    {
+        return "var1 " + this.var1 + "\nvar2: " +this.var2 + "\nvar3: " + this.var3;
     }
 }

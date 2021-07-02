@@ -25,5 +25,12 @@ public class ListDemo {
         testList.forEach(
                 (testList1) -> {System.out.println(testList1);}
         );/** Or use lambda */
+        testList.forEach(System.out::println);
+        /** a third way
+         * It is a syntactic sugar of SE 8, and it's equivalent to:
+         * testList.forEach( (testList1) -> System.out.println(testList1) )
+         * More: https://stackoverflow.com/questions/31020269/what-is-the-use-of-system-outprintln-in-java-8
+         * https://stackoverflow.com/questions/28023364/what-is-the-equivalent-lambda-expression-for-system-outprintln/28025717#280257172
+         * */
     }
 }
