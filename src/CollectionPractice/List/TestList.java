@@ -38,7 +38,7 @@ public class TestList implements Comparable<TestList>{
     public String toString()
     /** Overwrite toString method */
     {
-        return "var1 " + this.var1 + "\nvar2: " +this.var2 + "\nvar3: " + this.var3;
+        return "\nvar1: " + this.var1 + "\nvar2: " +this.var2 + "\nvar3: " + this.var3;
     }
 
     public int compareTo(TestList tl)
